@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Link + Toggle</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .card {
+            margin-top: 40px;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 15px;
+            background: white;
+            color: black;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        }
+
+        img {
+            width: 300px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff4b2b;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff416c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🔥 Goku Image Toggle + Link</h2>
+
+    <div class="card">
+
+        <a href="https://wallpapercave.com/goku-hd-4k-wallpapers" target="_blank">
+            <img id="myImage" 
+                 src="https://wallpapercave.com/wp/wp13510569.jpg" 
+                 onclick="toggleImage(event)">
+        </a>
+
+        <br>
+
+        
+        <button onclick="toggleImage(event)">Toggle Image</button>
+
+    </div>
+
+    <script>
+        function toggleImage(event) {
+            event.preventDefault();
+
+            let img = document.getElementById("myImage");
+
+            if (img.src.includes("wp13510569")) {
+                img.src = "https://tse2.mm.bing.net/th/id/OIP.pW4DMtKu9mxXvdMoOoveNQHaEo?pid=Api&P=0&h=180";
+            } else {
+                img.src = "https://tse2.mm.bing.net/th/id/OIP.jsx-Pu0kxG38AIjlYJ6GzwHaEX?pid=Api&P=0&h=180";
+            }
+
+            setTimeout(() => {
+                window.open("https://in.images.search.yahoo.com/images/view;_ylt=AwrKCXBD8eVpTLI2R3a9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzY4NGVkZTEwZDI1NDgzYTE1MWRhYjIxZTQ4Nzg0YmFkBGdwb3MDNDIEaXQDYmluZw--?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dgoku%2Bimage%2Bhd%26type%3DE210IN1666G0%26fr%3Dmcafee%26h%3D4014%26tt%3D4K%2BUltra%2BHD%2BGoku%2B-%2BDragon%2BBall%2BSuper%2BWallpaper%2Bby%2BNekoAR%26w%3D5000%26imgurl%3Dhttps%253A%252F%252Fimages2.alphacoders.com%252F867%252F867818.jpg%26rurl%3Dhttps%253A%252F%252Fwall.alphacoders.com%252Fbig.php%253Fi%253D867818%26turl%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%252Fid%252FOIP.lEmUzC2kOn0xy6jVs34FjQHaF8%253Fpid%253DApi%26tw%3D474%26th%3D380%26sigr%3DH0uqc3kAUkZo%26sigi%3DONAPk6HPbMm.%26sigt%3DhjIPpDLiHPPv%26sigit%3D3qJBjOuvHGo0%26tab%3Dorganic%26ri%3D42&w=1920&h=1080&imgurl=4kwallpapers.com%2Fimages%2Fwallpapers%2Fsuper-saiyan-goku-1920x1080-13279.jpg&rurl=https%3A%2F%2F4kwallpapers.com%2Fanime%2Fsuper-saiyan-goku-13279.html&size=468KB&p=goku+image+hd&oid=684ede10d25483a151dab21e48784bad&fr2=&fr=mcafee&tt=Super+Saiyan+Wallpaper+4K%2C+Goku%2C+Dragon+Ball%2C+Cinematic&b=0&ni=160&no=42&ts=&tab=organic&sigr=89NtIYacl.No&sigb=3Y05NAMK254_&sigi=rChjDiswO2kZ&sigt=OBvyLZDNxduN&.crumb=2eUVdtJKISj&fr=mcafee&type=E210IN1666G0", "_blank");
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>

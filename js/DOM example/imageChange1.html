@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Only Image Toggle</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Click Image to Toggle</h2>
+
+    <!-- Image (NO LINK HERE) -->
+    <img id="myImage"
+         src="https://wallpapercave.com/wp/wp13510569.jpg"
+         onclick="toggleImage()">
+
+    <script>
+        function toggleImage() {
+            let img = document.getElementById("myImage");
+
+            if (img.src.includes("wp13510569")) {
+                img.src = "https://tse2.mm.bing.net/th/id/OIP.pW4DMtKu9mxXvdMoOoveNQHaEo";
+            } 
+            else  {
+                img.src = "https://tse2.mm.bing.net/th/id/OIP.jsx-Pu0kxG38AIjlYJ6GzwHaEX";
+            }
+           
+        }
+    </script>
+
+</body>
+</html>

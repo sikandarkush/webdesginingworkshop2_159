@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>smart to do app</h2>
+   <input type="text" id="taskInput" placeholder="Enter a task"> 
+   <button id="addBtn">Add</button>
+   <ul id="tasklist"></ul>
+   const input=doc.getElementById("taskInput");
+   const addBtn=document.getElementById("addBtn");
+    const tasklist=document.getElementById("tasklist");
+    const count=document.getElementById("count");
+    let taskcount=0;
+    functionadd(task)
+    {
+        let tasktext=input.value.trim();
+        if(tasktext===" ")
+        return;
+        let li=document.createElement("li");
+        li.innerHTML=$"{tasktext} <button class="delete">X</button>";
+        list.appendChild(li);
+        taskcount++;
+        count innerText=taskCount;
+        input.value="";
+        list.addEventlistner("click",function(e)){
+            if(e.target.classList.contains("delete"))
+            {
+                e.target.parentElement.remove();
+                taskcount--;
+                count.innerText=taskCount;
+            }
+        }
+    }
+</body>
+</html>
