@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Clone</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e3e6e6;
+}
+
+.navbar{
+    background:#131921;
+    height:60px;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ff9900;
+}
+
+.location{
+    font-size:14px;
+}
+
+.search-box{
+    width:55%;
+    display:flex;
+}
+
+.search-box select{
+    width:60px;
+    border:none;
+    padding:10px;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border:none;
+    font-size:16px;
+}
+
+.search-box button{
+    width:50px;
+    border:none;
+    background:#febd69;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.nav-right{
+    display:flex;
+    gap:25px;
+}
+
+.panel{
+    background:#232f3e;
+    padding:12px 20px;
+    display:flex;
+    gap:25px;
+}
+
+.panel a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.hero{
+    height:420px;
+    background:url("https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=1600")
+    center center/cover;
+}
+
+.shop-section{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:20px;
+    margin-top:-150px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+}
+
+.box h2{
+    margin-bottom:15px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.products a{
+    text-decoration:none;
+    color:black;
+}
+
+.products img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+}
+
+.products p{
+    margin-top:5px;
+    font-size:13px;
+}
+
+.footer{
+    background:#232f3e;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media(max-width:1000px){
+    .shop-section{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .shop-section{
+        grid-template-columns:1fr;
+    }
+
+    .search-box{
+        width:40%;
+    }
+
+    .nav-right{
+        display:none;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+
+<div class="logo">
+amazon<span>.in</span>
+</div>
+
+<div class="location">
+Delivering to Ghaziabad<br>
+<b>Update location</b>
+</div>
+
+<form class="search-box"
+action="https://www.amazon.in/s"
+method="get"
+target="_blank">
+
+<select>
+<option>All</option>
+</select>
+
+<input
+type="text"
+name="k"
+placeholder="Search Amazon.in">
+
+<button type="submit">🔍</button>
+
+</form>
+
+<div class="nav-right">
+<div>Hello, Sign in</div>
+<div>Returns & Orders</div>
+<div>🛒 Cart</div>
+</div>
+
+</div>
+
+<div class="panel">
+<a href="#">All</a>
+<a href="#">Today's Deals</a>
+<a href="#">Prime</a>
+
+<a href="https://www.amazon.in/b?node=976419031"
+target="_blank">
+Electronics
+</a>
+
+<a href="https://www.amazon.in/fresh"
+target="_blank">
+Food
+</a>
+
+<a href="#">Customer Service</a>
+</div>
+
+<div class="hero"></div>
+
+<div class="shop-section">
+
+<div class="box">
+<h2>Electronics</h2>
+
+<div class="products">
+
+<a href="https://www.amazon.in/s?k=laptop" target="_blank">
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500">
+<p>Laptops</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=smartphone" target="_blank">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+<p>Mobiles</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=smartwatch" target="_blank">
+<img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500">
+<p>Smart Watch</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=headphones" target="_blank">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+<p>Headphones</p>
+</a>
+
+</div>
+</div>
+
+<div class="box">
+<h2>Home Appliances</h2>
+
+<div class="products">
+
+<a href="https://www.amazon.in/s?k=refrigerator" target="_blank">
+<img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=500">
+<p>Refrigerator</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=air+conditioner" target="_blank">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500">
+<p>Air Conditioner</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=microwave+oven" target="_blank">
+<img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=500">
+<p>Microwave</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=washing+machine" target="_blank">
+<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500">
+<p>Washing Machine</p>
+</a>
+
+</div>
+</div>
+
+<div class="box">
+<h2>Food & Grocery</h2>
+
+<div class="products">
+
+<a href="https://www.amazon.in/s?k=rice" target="_blank">
+<img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500">
+<p>Rice</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=fruits" target="_blank">
+<img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=500">
+<p>Fruits</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=vegetables" target="_blank">
+<img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500">
+<p>Vegetables</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=snacks" target="_blank">
+<img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=500">
+<p>Snacks</p>
+</a>
+
+</div>
+</div>
+
+<div class="box">
+<h2>Fashion</h2>
+
+<div class="products">
+
+<a href="https://www.amazon.in/s?k=mens+tshirt" target="_blank">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
+<p>T-Shirts</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=jeans+for+men" target="_blank">
+<img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500">
+<p>Jeans</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=shoes" target="_blank">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+<p>Shoes</p>
+</a>
+
+<a href="https://www.amazon.in/s?k=watches" target="_blank">
+<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500">
+<p>Watches</p>
+</a>
+
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+© Amazon Clone Website
+</div>
+
+</body>
+</html>
