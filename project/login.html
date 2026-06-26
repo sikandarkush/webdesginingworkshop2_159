@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Locked Page</title>
+
+<style>
+
+
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:cursive;
+    background:linear-gradient(-45deg,#120012,#2b002b,#000);
+}
+
+
+.login-box{
+
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 0 30px pink;
+
+    backdrop-filter:blur(10px);
+}
+
+h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+input{
+
+    padding:10px;
+    width:200px;
+
+    border-radius:10px;
+    border:none;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:18px;
+}
+
+button{
+
+    margin-top:15px;
+    padding:10px 20px;
+
+    border:none;
+    border-radius:10px;
+
+    background:pink;
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+#error{
+    color:red;
+    margin-top:10px;
+}
+
+
+
+#mainPage{
+    display:none;
+}
+
+
+
+.romantic{
+
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+    linear-gradient(-45deg,#140014,#250025,#32003d,#180018);
+
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+
+    position:relative;
+}
+
+
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+
+.heading{
+
+    position:absolute;
+    top:15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#fff;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    text-shadow:0 0 10px pink;
+
+    z-index:10;
+}
+
+
+.main{
+
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+
+.frame{
+
+    width:280px;
+    height:430px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:5px solid rgba(255,255,255,0.45);
+
+    box-shadow:0 0 40px pink;
+
+}
+
+
+
+.frame img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+.poetry-box{
+
+    width:620px;
+    height:470px;
+
+    background:#f5f2eb;
+
+    border-radius:20px;
+
+    padding:35px 40px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 0 90px rgba(255,0,120,0.22);
+}
+
+#typing{
+
+    color:#111;
+
+    font-size:24px;
+
+    line-height:1.4;
+
+    white-space:pre-line;
+
+    position:relative;
+    z-index:2;
+}
+
+
+.anime-girl{
+
+    position:absolute;
+    right:10px;
+    bottom:10px;
+
+    width:130px;
+
+    z-index:1;
+
+    filter:drop-shadow(0 0 10px pink);
+
+    animation:floatGirl 3s infinite ease-in-out;
+}
+
+
+@keyframes floatGirl{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+
+
+.float{
+
+    position:absolute;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    from{transform:translateY(0);opacity:1;}
+    to{transform:translateY(-110vh) scale(2);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="login-box" id="loginBox">
+
+<h2>Enter Password 💖</h2>
+
+<input type="password" id="pass" placeholder="Password">
+
+<br>
+
+<button onclick="checkPass()">Enter</button>
+
+<div id="error"></div>
+
+</div>
+
+
+
+<div id="mainPage">
+
+<div class="romantic">
+
+
+
+<h2 class="heading" style="text-decoration: underline;">Love is a beautiful feeling in the World 💖</h2>
+
+<div class="main">
+
+
+
+<div class="frame">
+
+<img src="https://cdn.pixabay.com/photo/2025/08/16/08/43/krishna-9778093_1280.jpg">
+
+</div>
+
+
+
+<div class="poetry-box">
+
+<div id="typing"></div>
+
+<img class="anime-girl"
+src="https://cdn.pixabay.com/photo/2022/06/13/15/32/anime-7260244_1280.png">
+
+</div>
+
+
+
+<div class="frame">
+
+<img src="https://photosbhai.com/wp-content/uploads/2024/12/shiv-parvati-love-wallpaper-2.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+
+
+function checkPass(){
+
+    let p=document.getElementById("pass").value;
+
+    if(p==="love"){
+
+        document.getElementById("loginBox").style.display="none";
+        document.getElementById("mainPage").style.display="block";
+
+        startTyping();
+
+    }else{
+
+        document.getElementById("error").innerText="Wrong Password ❌";
+    }
+}
+
+
+const poetry=`यूँ ही उदास है दिल बेकरार थोड़ी है
+
+मुझे किसी का कोई इंतजार थोड़ी है
+
+
+नज़र मिला के भी तुम से गिला करूँ कैसे
+
+तुम्हारे दिल पे मेरा इख्तियार थोड़ी है
+
+
+मुझे भी नींद न आए उसे भी चैन न हो
+
+हमारे बीच भला इतना प्यार थोड़ी है..!! 💖`;
+
+function startTyping(){
+
+let typing=document.getElementById("typing");
+let words=poetry.split(" ");
+let i=0;
+
+function type(){
+
+    if(i<words.length){
+
+        typing.innerHTML += words[i] + " ";
+        i++;
+
+        setTimeout(type,120);
+    }
+}
+
+type();
+
+}
+
+/* FLOATING EFFECT */
+
+setInterval(()=>{
+
+    let item=document.createElement("div");
+
+    item.classList.add("float");
+
+    const emojis=["💖","💕","✨","🌸","❤️","💞"];
+
+    item.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+    item.style.left=Math.random()*100+"vw";
+    item.style.top="100vh";
+
+    item.style.fontSize=(Math.random()*20+18)+"px";
+    item.style.animationDuration=(Math.random()*4+3)+"s";
+
+    document.body.appendChild(item);
+
+    setTimeout(()=>item.remove(),7000);
+
+},300);
+
+</script>
+
+</body>
+</html>
